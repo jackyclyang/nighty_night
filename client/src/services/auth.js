@@ -21,5 +21,9 @@ export const verifyUser = async () => {
     const resp = await api.get('/auth/verify');
     return resp.data
   }
-  return false
+  return null
+}
+
+export const removeToken = () => {
+  api.defaults.headers.common.authorization = null
 }
