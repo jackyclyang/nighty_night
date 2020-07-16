@@ -19,7 +19,6 @@ export default class GreatThings extends Component {
     let greatThings = await getGreatThings(id)
 
     this.setState({ greatThings })
-    console.log(this.state.greatThings)
 
   }
 

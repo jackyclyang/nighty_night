@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import Login from './Login.jsx'
 import Register from './Register.jsx'
 import GreatThings from './GreatThings.jsx'
+import ToDos from './ToDos.jsx'
 
 
 export default class Main extends Component {
@@ -31,6 +32,9 @@ export default class Main extends Component {
         )} />
         {currentUser ? (<Route path='/great'>
           <GreatThings currentUser={currentUser} />
+        </Route>) : <div></div>}
+        {currentUser ? (<Route path='/todo'>
+          <ToDos currentUser={currentUser} />
         </Route>) : <div></div>}
 
 

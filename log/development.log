@@ -4531,3 +4531,1544 @@ ActionController::ParameterMissing (param is missing or the value is empty: grea
   
 app/controllers/great_things_controller.rb:53:in `great_thing_params'
 app/controllers/great_things_controller.rb:20:in `create'
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:20:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:20:35 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1721)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 1915)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 14:20:43 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.8ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 1056)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-16 14:20:52 -0400
+Processing by GreatThingsController#create as HTML
+  Parameters: {"greatThing"=>{"content"=>"aegraregae", "date"=>""}, "user_id"=>"1", "great_thing"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 134)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: great_thing):
+  
+app/controllers/great_things_controller.rb:53:in `great_thing_params'
+app/controllers/great_things_controller.rb:20:in `create'
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:21:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:21:48 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1564)
+
+
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 1932)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 14:21:48 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (10.2ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 10.2ms | Allocations: 1056)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:21:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:21:58 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 9.2ms | Allocations: 1403)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 17ms (Views: 1.7ms | ActiveRecord: 8.3ms | Allocations: 2067)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 14:21:59 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.5ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1054)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:22:07 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:22:07 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 844)
+
+
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 7.9ms | Allocations: 2402)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 14:22:08 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.5ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1054)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-16 14:22:11 -0400
+Processing by GreatThingsController#create as HTML
+  Parameters: {"greatThing"=>{"content"=>"g", "date"=>""}, "user_id"=>"1", "great_thing"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 134)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: great_thing):
+  
+app/controllers/great_things_controller.rb:53:in `great_thing_params'
+app/controllers/great_things_controller.rb:20:in `create'
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 14:22:37 -0400
+Processing by GreatThingsController#index as */*
+  Parameters: {"content"=>"finish part 1", "user_id"=>"1", "great_thing"=>{"content"=>"finish part 1"}}
+  [1m[36mGreatThing Load (0.2ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1055)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-16 14:23:19 -0400
+Processing by GreatThingsController#create as */*
+  Parameters: {"content"=>"finish part 1", "date"=>"", "user_id"=>"1", "great_thing"=>{"content"=>"finish part 1", "date"=>"", "user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[36mGreatThing Create (25.6ms)[0m  [1m[32mINSERT INTO "great_things" ("content", "date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "finish part 1"], ["date", ""], ["created_at", "2020-07-16 18:23:19.710736"], ["updated_at", "2020-07-16 18:23:19.710736"], ["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+Completed 201 Created in 59ms (Views: 0.5ms | ActiveRecord: 27.2ms | Allocations: 4962)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:24:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:24:44 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 1549)
+
+
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 1229)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 14:24:44 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.5ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1168)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:25:06 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:25:06 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 1461)
+
+
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 8.5ms | Allocations: 1776)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 14:25:06 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (4.2ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 4.2ms | Allocations: 1168)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-16 14:25:10 -0400
+Processing by GreatThingsController#create as HTML
+  Parameters: {"greatThing"=>{"content"=>"g", "date"=>""}, "user_id"=>"1", "great_thing"=>{"user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[36mGreatThing Create (6.7ms)[0m  [1m[32mINSERT INTO "great_things" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-07-16 18:25:10.560702"], ["updated_at", "2020-07-16 18:25:10.560702"], ["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 12.8ms | Allocations: 3006)
+
+
+Started PUT "/users/1/great_things" for ::1 at 2020-07-16 14:30:51 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/great_things"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	  "id": 5,
+		"date": "July 15, 2020",
+}
+Started PUT "/users/1/great_things" for ::1 at 2020-07-16 14:30:56 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/great_things"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/users/1/great_things/5" for ::1 at 2020-07-16 14:31:04 -0400
+Processing by GreatThingsController#update as */*
+  Parameters: {"date"=>"July 15, 2020", "user_id"=>"1", "id"=>"5", "great_thing"=>{"date"=>"July 15, 2020"}}
+  [1m[36mGreatThing Load (0.4ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things" WHERE "great_things"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:48:in `set_great_thing'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:33:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:33:in `update'
+  [1m[36mGreatThing Update (0.8ms)[0m  [1m[33mUPDATE "great_things" SET "date" = $1, "updated_at" = $2 WHERE "great_things"."id" = $3[0m  [["date", "July 15, 2020"], ["updated_at", "2020-07-16 18:31:04.229978"], ["id", 5]]
+  ↳ app/controllers/great_things_controller.rb:33:in `update'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:33:in `update'
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 8.1ms | Allocations: 6288)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:32:18 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 14:32:18 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 844)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 943)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 14:32:18 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.7ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 1273)
+
+
+Started PUT "/users/1/to_dos" for ::1 at 2020-07-16 14:40:51 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/to_dos"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/users/1/todos" for ::1 at 2020-07-16 14:40:55 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/todos"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/users/1/to_do" for ::1 at 2020-07-16 14:41:00 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/to_do"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/users/1/todo" for ::1 at 2020-07-16 14:41:03 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/todo"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/todo" for ::1 at 2020-07-16 14:41:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/todo"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/to_do" for ::1 at 2020-07-16 14:41:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/to_do"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 14:41:13 -0400
+Processing by ToDosController#index as */*
+  Parameters: {"date"=>"July 15, 2020", "user_id"=>"1", "to_do"=>{}}
+  [1m[36mToDo Load (12.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 7.6ms | ActiveRecord: 29.9ms | Allocations: 3903)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-16 14:55:38 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-16 14:55:48 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/to_dos/1" for ::1 at 2020-07-16 14:55:51 -0400
+Processing by ToDosController#show as */*
+  Parameters: {"content"=>"finish part 2", "user_id"=>"1", "id"=>"1", "to_do"=>{"content"=>"finish part 2"}}
+  [1m[36mToDo Load (2.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.8ms | Allocations: 956)
+
+
+Started POST "/users/1/to_dos/" for ::1 at 2020-07-16 14:56:10 -0400
+Processing by ToDosController#create as */*
+  Parameters: {"content"=>"finish part 2", "status"=>"incomplete", "user_id"=>"1", "to_do"=>{"content"=>"finish part 2", "status"=>"incomplete", "user_id"=>"1"}}
+[31mUnpermitted parameters: :status, :user_id[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (21.7ms)[0m  [1m[32mINSERT INTO "to_dos" ("content", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "finish part 2"], ["created_at", "2020-07-16 18:56:10.920243"], ["updated_at", "2020-07-16 18:56:10.920243"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 28ms (Views: 0.3ms | ActiveRecord: 23.2ms | Allocations: 3151)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:12:52 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:12:52 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 2262)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 999)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:12:52 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.8ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 1273)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:16:41 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.7ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:16:50 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1271)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:24:07 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.9ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 1121)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:24:10 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.7ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1272)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:24:14 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:24:17 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1272)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:24:19 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:24:20 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.4ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1271)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:24:21 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:24:21 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1271)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:24:22 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:24:23 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.2ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1271)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:24:57 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:24:58 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1272)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:25:52 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:25:53 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1271)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:25:54 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:25:56 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1271)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:26:00 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:26:00 -0400
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.9ms | Allocations: 1426)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 943)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:26:03 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.6ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1273)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:30:06 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:30:07 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1271)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:30:55 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:30:55 -0400
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 4.2ms | Allocations: 1625)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1055)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:30:56 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (13.1ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 16ms (Views: 2.8ms | ActiveRecord: 13.1ms | Allocations: 1168)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:31:01 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:31:02 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.2ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1168)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:55:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:55:29 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1722)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1946)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:55:29 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.7ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 1170)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:56:05 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:56:05 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 1303)
+
+
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 6.8ms | Allocations: 1055)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:56:05 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.7ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1170)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:56:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 15:56:31 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 845)
+
+
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 10.1ms | Allocations: 1941)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:56:31 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (24.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 26ms (Views: 1.8ms | ActiveRecord: 24.3ms | Allocations: 1169)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:56:32 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 15:57:06 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1169)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 15:57:18 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1047)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:03:08 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:03:08 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 943)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 943)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:03:09 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.7ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1049)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:03:12 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.6ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 1168)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:03:13 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1048)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:03:32 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:03:32 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 1491)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1720)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:03:32 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.1ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.1ms | Allocations: 1049)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:03:37 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:03:37 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1041)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 1708)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:03:37 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:03:39 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1168)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:03:40 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1047)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:04:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:04:04 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 1933)
+
+
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1565)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:04:04 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (2.1ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 2.1ms | Allocations: 1047)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:18 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:18 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 1461)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 1720)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:05:19 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (8.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 2.5ms | ActiveRecord: 8.3ms | Allocations: 1048)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:34 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 853)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 8.3ms | Allocations: 900)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:05:34 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1047)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:36 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:36 -0400
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 1175)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:05:36 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.6ms | Allocations: 1047)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:45 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1471)
+
+
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1565)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:05:45 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.0ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.0ms | Allocations: 1047)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:54 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:05:54 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 844)
+
+
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 2393)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:05:54 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1047)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:10:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:10:55 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 845)
+
+
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 11.8ms | Allocations: 1944)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:10:55 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (9.0ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 9.0ms | Allocations: 1047)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:12:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:12:21 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 11.5ms | Allocations: 1934)
+
+
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 8.5ms | Allocations: 1566)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:12:21 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.9ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.9ms | Allocations: 1047)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-16 16:12:25 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"toDo"=>{"content"=>"finish part 3", "status"=>"in progress"}, "user_id"=>"1", "to_do"=>{"user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (0.9ms)[0m  [1m[32mINSERT INTO "to_dos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-07-16 20:12:25.237413"], ["updated_at", "2020-07-16 20:12:25.237413"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 12.2ms | Allocations: 3002)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:13:03 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:13:03 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 17.5ms | Allocations: 1761)
+
+
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 5.5ms | Allocations: 1776)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:13:03 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.6ms | Allocations: 1149)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-16 16:13:07 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"toDo"=>{"content"=>"finish part 3", "status"=>"in progress"}, "user_id"=>"1", "to_do"=>{"user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (1.0ms)[0m  [1m[32mINSERT INTO "to_dos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-07-16 20:13:07.877394"], ["updated_at", "2020-07-16 20:13:07.877394"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (16.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 23ms (Views: 0.4ms | ActiveRecord: 17.8ms | Allocations: 3003)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:13:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:13:16 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 1038)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 1720)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:13:16 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1252)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-16 16:13:19 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"toDo"=>{"content"=>"finish part 3", "status"=>"in progress"}, "user_id"=>"1", "to_do"=>{"user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-07-16 20:13:19.443823"], ["updated_at", "2020-07-16 20:13:19.443823"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 12ms (Views: 0.3ms | ActiveRecord: 6.7ms | Allocations: 3001)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:13:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:13:53 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 844)
+
+
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 10.6ms | Allocations: 2393)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:13:53 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.4ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1354)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-16 16:13:57 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"toDo"=>{"content"=>"finish part 3", "status"=>"in progress"}, "user_id"=>"1", "to_do"=>{"user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-07-16 20:13:57.321111"], ["updated_at", "2020-07-16 20:13:57.321111"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 11ms (Views: 0.4ms | ActiveRecord: 6.4ms | Allocations: 3001)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:14:06 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:14:06 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1008)
+
+
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 6.0ms | Allocations: 1776)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:14:06 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1456)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-16 16:14:27 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"toDo"=>{"content"=>"finish part 3", "status"=>"in progress"}, "user_id"=>"1", "to_do"=>{"user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (0.4ms)[0m  [1m[32mINSERT INTO "to_dos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-07-16 20:14:27.192247"], ["updated_at", "2020-07-16 20:14:27.192247"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 11ms (Views: 0.3ms | ActiveRecord: 6.2ms | Allocations: 3003)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:16:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:16:17 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1307)
+
+
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1729)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:16:18 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 1558)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-16 16:16:21 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"toDo"=>{"content"=>"finish part 3", "status"=>"in progress"}, "user_id"=>"1", "to_do"=>{"user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (0.5ms)[0m  [1m[32mINSERT INTO "to_dos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-07-16 20:16:21.021013"], ["updated_at", "2020-07-16 20:16:21.021013"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 13ms (Views: 0.5ms | ActiveRecord: 7.6ms | Allocations: 3001)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:17:40 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.5ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1168)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-16 16:17:51 -0400
+Processing by GreatThingsController#create as HTML
+  Parameters: {"greatThing"=>{"content"=>"i had peaches", "date"=>"123"}, "user_id"=>"1", "great_thing"=>{"user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[36mGreatThing Create (0.6ms)[0m  [1m[32mINSERT INTO "great_things" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2020-07-16 20:17:51.283875"], ["updated_at", "2020-07-16 20:17:51.283875"], ["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+Completed 201 Created in 14ms (Views: 0.4ms | ActiveRecord: 6.9ms | Allocations: 3001)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:18:14 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:18:14 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1233)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 1692)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:18:14 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (16.1ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 21ms (Views: 4.6ms | ActiveRecord: 16.1ms | Allocations: 1271)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:18:18 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1660)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-16 16:18:20 -0400
+Processing by ToDosController#create as HTML
+  Parameters: {"content"=>"finish part 3", "status"=>"in progress", "user_id"=>"1", "to_do"=>{"content"=>"finish part 3", "status"=>"in progress", "user_id"=>"1"}}
+[31mUnpermitted parameters: :status, :user_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (0.5ms)[0m  [1m[32mINSERT INTO "to_dos" ("content", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "finish part 3"], ["created_at", "2020-07-16 20:18:20.819423"], ["updated_at", "2020-07-16 20:18:20.819423"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 12ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 3055)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:18:44 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:18:44 -0400
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 6.2ms | Allocations: 1625)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1055)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:18:44 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (6.7ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 6.7ms | Allocations: 1768)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:18:46 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.2ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1271)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-16 16:18:57 -0400
+Processing by GreatThingsController#create as HTML
+  Parameters: {"content"=>"i had cherries\nand it's great\n\ni love it", "date"=>"123", "user_id"=>"1", "great_thing"=>{"content"=>"i had cherries\nand it's great\n\ni love it", "date"=>"123", "user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[36mGreatThing Create (0.4ms)[0m  [1m[32mINSERT INTO "great_things" ("content", "date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "i had cherries\nand it's great\n\ni love it"], ["date", "123"], ["created_at", "2020-07-16 20:18:58.001679"], ["updated_at", "2020-07-16 20:18:58.001679"], ["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+Completed 201 Created in 13ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 3080)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:19:19 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1769)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:20:47 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 844)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:20:47 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:20:47 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 1768)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:24:51 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 844)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:24:51 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:24:51 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (7.1ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 7.1ms | Allocations: 1155)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:24:54 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.2ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1284)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:24:56 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:25:02 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1284)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:25:09 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+

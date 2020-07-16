@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 
-export default class CreateGreatThings extends Component {
-
+export default class CreateToDo extends Component {
   state = {
     content: '',
-    date: ''
+    status: ''
   }
 
   handleContentChange = (e) => {
@@ -14,42 +13,40 @@ export default class CreateGreatThings extends Component {
     })
   }
 
-  handleDateChange = (e) => {
+  handleStatusChange = (e) => {
     const { value } = e.target
     this.setState({
-      date: value
+      status: value
     })
   }
 
 
   render() {
-    const { handleCreateGreatThings } = this.props
+    const { handleCreateToDo } = this.props
 
     return (
       <form onSubmit={(e) => {
         e.preventDefault()
-        handleCreateGreatThings(this.state)
+        handleCreateToDo(this.state)
 
       }}>
         <label>
-          What great things happend today? <br />
-          <textarea
+          Here, get out any to-dos that are on your mind <br />
+          <input
             name="content"
-            rows="10"
             value={this.state.content}
             onChange={this.handleContentChange}
           />
           <br />
           <input
-            name="date"
-            value={this.state.date}
-            onChange={this.handleDateChange}
+            name="status"
+            value={this.state.status}
+            onChange={this.handleStatusChange}
           />
         </label>
         <br />
-        <button>Save the joy</button>
+        <button>Submit</button>
       </form >
     )
   }
-
 }

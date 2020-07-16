@@ -12,6 +12,7 @@ export default function Header(props) {
           <p>Hello, {currentUser.name}!</p>
           <button onClick={handleLogout}>Sign out</button>
           <Link to='/great'>Great Things</Link>
+          <Link to='/todo'>To Do List</Link>
         </>
       ) : (
           <div>
