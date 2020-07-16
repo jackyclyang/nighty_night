@@ -1,0 +1,480 @@
+  [1m[35m (224.3ms)[0m  [1m[35mCREATE DATABASE "nighty_night_development" ENCODING = 'unicode'[0m
+  [1m[35m (75.3ms)[0m  [1m[35mCREATE DATABASE "nighty_night_test" ENCODING = 'unicode'[0m
+  [1m[35m (23.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4911107384474118660)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200714143029)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200714143029"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGreatThings (20200714144718)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE TABLE "great_things" ("id" bigserial primary key, "content" character varying, "date" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200714144718"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserToGreatThing (20200714151548)
+  [1m[35m (11.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "great_things" ADD "user_id" bigint NOT NULL[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE  INDEX  "index_great_things_on_user_id" ON "great_things"  ("user_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "great_things" ADD CONSTRAINT "fk_rails_b145f82c40"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200714151548"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateToDos (20200714151641)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE "to_dos" ("id" bigserial primary key, "content" character varying, "checked" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200714151641"]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-14 15:28:39.751342"], ["updated_at", "2020-07-14 15:28:39.751342"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4911107384474118660)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4911107384474118660)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToToDo (20200714152918)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "dos" ADD "user_id" bigint NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4911107384474118660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4911107384474118660)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToToDo (20200714152918)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "to_dos" ADD "user_id" bigint NOT NULL[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE  INDEX  "index_to_dos_on_user_id" ON "to_dos"  ("user_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "to_dos" ADD CONSTRAINT "fk_rails_6ea8967417"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200714152918"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4911107384474118660)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4911107384474118660)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4911107384474118660)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4911107384474118660)[0m
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeCheckedToBeBooleanInToDo (20200715144624)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mALTER TABLE "to_dos" ALTER COLUMN "checked" TYPE boolean[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4911107384474118660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4911107384474118660)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeCheckedToBeBooleanInToDo (20200715144624)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4911107384474118660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4911107384474118660)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeCheckedToBeBooleanInToDo (20200715144624)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4911107384474118660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4911107384474118660)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeCheckedInToDo (20200715145158)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mALTER TABLE "to_dos" RENAME COLUMN "checked" TO "status"[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200715145158"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4911107384474118660)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGreatThing Load (0.6ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacky@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jacky"], ["email", "jacky@email.com"], ["password_digest", "$2a$12$PJoB1r9jO25BJCp.tbSJiel9F1uJPXGWfzg6OF3S.Ueu9gH09fupq"], ["created_at", "2020-07-15 14:57:33.435802"], ["updated_at", "2020-07-15 14:57:33.435802"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGreatThing Create (0.9ms)[0m  [1m[32mINSERT INTO "great_things" ("content", "date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "i saw a cute dog today"], ["date", "July 10, 2020"], ["created_at", "2020-07-15 14:57:33.453701"], ["updated_at", "2020-07-15 14:57:33.453701"], ["user_id", 1]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mToDo Create (0.8ms)[0m  [1m[32mINSERT INTO "to_dos" ("content", "status", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "finish part 2"], ["status", "incomplete"], ["created_at", "2020-07-15 14:57:33.475913"], ["updated_at", "2020-07-15 14:57:33.475913"], ["user_id", 1]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-07-15 11:01:34 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/yangchenlong/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yangchenlong/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.0ms | Allocations: 409)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 2257)
+
+
+Started GET "/users" for ::1 at 2020-07-15 11:01:40 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+Completed 200 OK in 23ms (Views: 9.1ms | ActiveRecord: 4.8ms | Allocations: 6659)
+
+
+Started GET "/users/1/todo" for ::1 at 2020-07-15 11:01:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/todo"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/todos" for ::1 at 2020-07-15 11:01:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/todos"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1/" for ::1 at 2020-07-15 11:01:56 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50:in `set_user'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1201)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-15 11:02:00 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.5ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 8.1ms | ActiveRecord: 3.6ms | Allocations: 4966)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-15 11:02:04 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.1ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 10.8ms | ActiveRecord: 6.8ms | Allocations: 4498)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-15 11:02:19 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.4ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 939)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-15 11:38:25 -0400
+Processing by GreatThingsController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.8ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.8ms | Allocations: 1017)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-15 11:39:15 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	  "content": "i ate some sweet cherries",
+    "date": "July 11, 2020",
+}
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{
+	  "content": "i ate some sweet cherries",
+    "date": "July 11, 2020",
+}'):
+  
+actionpack (6.0.3.2) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.3.2) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:389:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.3.2) lib/action_dispatch/http/request.rb:388:in `POST'
+actionpack (6.0.3.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:278:in `_wrapper_enabled?'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	  "content": "i ate some sweet cherries",
+    "date": "July 11, 2020",
+}
+Started POST "/users/1/great_things" for ::1 at 2020-07-15 11:39:27 -0400
+Processing by GreatThingsController#create as */*
+  Parameters: {"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020", "user_id"=>"1", "great_thing"=>{"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020"}}
+Completed 422 Unprocessable Entity in 24ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 4939)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-15 11:43:40 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GreatThingsController#create as */*
+  Parameters: {"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020", "user_id"=>"1", "great_thing"=>{"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:19:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+  [1m[36mGreatThing Create (1.2ms)[0m  [1m[32mINSERT INTO "great_things" ("content", "date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "i ate some sweet cherries"], ["date", "July 11, 2020"], ["created_at", "2020-07-15 15:43:40.889347"], ["updated_at", "2020-07-15 15:43:40.889347"], ["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 20.9ms | Allocations: 43031)
+
+
+  
+NoMethodError (undefined method `great_thing_url' for #<GreatThingsController:0x00007fee1e1c02c8>):
+  
+app/controllers/great_things_controller.rb:23:in `create'
+Started GET "/users/1/great_things" for ::1 at 2020-07-15 11:45:10 -0400
+Processing by GreatThingsController#index as */*
+  Parameters: {"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020", "user_id"=>"1", "great_thing"=>{"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020"}}
+  [1m[36mGreatThing Load (0.7ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1111)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-15 11:45:16 -0400
+Processing by GreatThingsController#create as */*
+  Parameters: {"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020", "user_id"=>"1", "great_thing"=>{"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:19:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+  [1m[36mGreatThing Create (0.4ms)[0m  [1m[32mINSERT INTO "great_things" ("content", "date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "i ate some sweet cherries"], ["date", "July 11, 2020"], ["created_at", "2020-07-15 15:45:16.891790"], ["updated_at", "2020-07-15 15:45:16.891790"], ["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 2.9ms | Allocations: 33297)
+
+
+  
+NoMethodError (undefined method `great_thing_url' for #<GreatThingsController:0x00007fee213a5a90>):
+  
+app/controllers/great_things_controller.rb:23:in `create'
+Started GET "/users/1/great_things" for ::1 at 2020-07-15 11:45:22 -0400
+Processing by GreatThingsController#index as */*
+  Parameters: {"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020", "user_id"=>"1", "great_thing"=>{"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020"}}
+  [1m[36mGreatThing Load (0.2ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1188)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-15 11:46:40 -0400
+Processing by GreatThingsController#create as */*
+  Parameters: {"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020", "user_id"=>"1", "great_thing"=>{"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:19:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+  [1m[36mGreatThing Create (0.4ms)[0m  [1m[32mINSERT INTO "great_things" ("content", "date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "i ate some sweet cherries"], ["date", "July 11, 2020"], ["created_at", "2020-07-15 15:46:40.433740"], ["updated_at", "2020-07-15 15:46:40.433740"], ["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:22:in `create'
+Completed 201 Created in 27ms (Views: 0.3ms | ActiveRecord: 7.0ms | Allocations: 10802)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-15 11:46:44 -0400
+Processing by GreatThingsController#index as */*
+  Parameters: {"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020", "user_id"=>"1", "great_thing"=>{"content"=>"i ate some sweet cherries", "date"=>"July 11, 2020"}}
+  [1m[36mGreatThing Load (0.3ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1301)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-15 12:50:32 -0400
+Processing by ToDosController#index as */*
+  Parameters: {"content"=>"look for apartment", "user_id"=>"1", "to_do"=>{"content"=>"look for apartment"}}
+  [1m[36mToDo Load (0.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 7.5ms | Allocations: 3913)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-15 12:50:42 -0400
+Processing by ToDosController#create as */*
+  Parameters: {"content"=>"look for apartment", "user_id"=>"1", "to_do"=>{"content"=>"look for apartment"}}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 122)
+
+
+Started POST "/users/1/to_dos" for ::1 at 2020-07-15 12:51:04 -0400
+Processing by ToDosController#create as */*
+  Parameters: {"content"=>"look for apartment", "user_id"=>"1", "to_do"=>{"content"=>"look for apartment"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:20:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[36mToDo Create (0.7ms)[0m  [1m[32mINSERT INTO "to_dos" ("content", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "look for apartment"], ["created_at", "2020-07-15 16:51:04.810217"], ["updated_at", "2020-07-15 16:51:04.810217"], ["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:23:in `create'
+Completed 201 Created in 38ms (Views: 0.4ms | ActiveRecord: 19.6ms | Allocations: 10785)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-15 12:51:10 -0400
+Processing by ToDosController#index as */*
+  Parameters: {"content"=>"look for apartment", "user_id"=>"1", "to_do"=>{"content"=>"look for apartment"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-15 12:51:44 -0400
+Processing by ToDosController#index as */*
+  Parameters: {"content"=>"look for apartment", "user_id"=>"1", "to_do"=>{"content"=>"look for apartment"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1055)
+
+
+Started GET "/users/1/to_dos/1" for ::1 at 2020-07-15 16:32:54 -0400
+Processing by ToDosController#show as */*
+  Parameters: {"content"=>"look for apartment", "user_id"=>"1", "id"=>"1", "to_do"=>{"content"=>"look for apartment"}}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 958)
+
+
+Started PUT "/users/1/to_dos/1" for ::1 at 2020-07-15 16:33:08 -0400
+Processing by ToDosController#update as */*
+  Parameters: {"content"=>"finish part 1", "user_id"=>"1", "id"=>"1", "to_do"=>{"content"=>"finish part 1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.4ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 1"], ["updated_at", "2020-07-15 20:33:08.251697"], ["id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 32ms (Views: 0.5ms | ActiveRecord: 13.1ms | Allocations: 6524)
+
+
+Started GET "/users/1/to_dos/2" for ::1 at 2020-07-15 16:33:15 -0400
+Processing by ToDosController#show as */*
+  Parameters: {"content"=>"finish part 1", "user_id"=>"1", "id"=>"2", "to_do"=>{"content"=>"finish part 1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 747)
+
+
+Started DELETE "/users/1/to_dos/2" for ::1 at 2020-07-15 16:33:18 -0400
+Processing by ToDosController#destroy as */*
+  Parameters: {"content"=>"finish part 1", "user_id"=>"1", "id"=>"2", "to_do"=>{"content"=>"finish part 1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:41:in `destroy'
+  [1m[36mToDo Destroy (0.2ms)[0m  [1m[31mDELETE FROM "to_dos" WHERE "to_dos"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/to_dos_controller.rb:41:in `destroy'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:41:in `destroy'
+Completed 204 No Content in 6ms (ActiveRecord: 2.5ms | Allocations: 2436)
+
+
+Started GET "/users/1/to_dos/" for ::1 at 2020-07-15 16:33:22 -0400
+Processing by ToDosController#index as */*
+  Parameters: {"content"=>"finish part 1", "user_id"=>"1", "to_do"=>{"content"=>"finish part 1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 942)
+
+
+Started GET "/users/1/to_dos/" for ::1 at 2020-07-15 17:43:51 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ToDosController#index as */*
+  Parameters: {"content"=>"finish part 1", "user_id"=>"1", "to_do"=>{"content"=>"finish part 1"}}
+  [1m[36mToDo Load (6.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 36ms (Views: 19.4ms | ActiveRecord: 17.0ms | Allocations: 4209)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-15 17:43:58 -0400
+Processing by GreatThingsController#index as */*
+  Parameters: {"content"=>"finish part 1", "user_id"=>"1", "great_thing"=>{"content"=>"finish part 1"}}
+  [1m[36mGreatThing Load (0.5ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 3.3ms | Allocations: 3956)
+
+
