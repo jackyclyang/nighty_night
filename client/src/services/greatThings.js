@@ -5,6 +5,11 @@ export const getGreatThings = async (user_id) => {
   return response.data
 }
 
+export const getOneGreatThings = async (user_id, id) => {
+  const response = await api.get(`users/${user_id}/great_things/${id}`)
+  return response.data
+}
+
 export const postGreatThings = async (user_id, greatThingsData) => {
   const response = await api.post(`users/${user_id}/great_things`, { content: greatThingsData.content, date: greatThingsData.date, user_id: user_id })
   return response.data

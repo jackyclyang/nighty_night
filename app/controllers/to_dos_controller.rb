@@ -4,7 +4,7 @@ class ToDosController < ApplicationController
 
   # GET /to_dos
   def index
-    @to_dos = ToDo.all
+    @to_dos = ToDo.where(user_id: params[:user_id])
 
     render json: @to_dos
   end
@@ -44,11 +44,12 @@ class ToDosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_to_do
-      @to_do = ToDo.find(params[:id])
+      @to_do = ToDo.find_by(user_id: params[:user_id], id:params[:id])
+      # @to_do = @to_dos.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def to_do_params
-      params.require(:to_do).permit(:content, :checked)
+      params.require(:to_do).permit(:content, :status)
     end
 end

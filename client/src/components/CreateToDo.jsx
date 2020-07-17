@@ -15,6 +15,7 @@ export default class CreateToDo extends Component {
 
   handleStatusChange = (e) => {
     const { value } = e.target
+    console.log(value)
     this.setState({
       status: value
     })
@@ -24,29 +25,34 @@ export default class CreateToDo extends Component {
   render() {
     const { handleCreateToDo } = this.props
 
+
     return (
       <form onSubmit={(e) => {
         e.preventDefault()
+        console.log(this.state)
         handleCreateToDo(this.state)
 
       }}>
         <label>
           Here, get out any to-dos that are on your mind <br />
+          <select defaultValue="-Select Status-" onChange={this.handleStatusChange} >
+            <option disabled >-Select Status-</option>
+            <option value="Open">Open</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Complete">Complete</option>
+          </select>
           <input
             name="content"
             value={this.state.content}
             onChange={this.handleContentChange}
           />
           <br />
-          <input
-            name="status"
-            value={this.state.status}
-            onChange={this.handleStatusChange}
-          />
+
         </label>
         <br />
         <button>Submit</button>
       </form >
     )
+
   }
 }

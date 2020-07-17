@@ -34,11 +34,14 @@ export default class ToDoItem extends Component {
     const { isEditing } = this.state
     this.setState({ isEditing: !isEditing })
   }
+  handleStatusChange = (e) => {
+    const { value } = e.target
+    this.setState({ status: value })
+  }
 
-  handleChange = (e) => {
+  handleContentChange = (e) => {
     const { value } = e.target
     this.setState({ content: value })
-
   }
 
   handleSaveClick = (e) => {
@@ -56,18 +59,29 @@ export default class ToDoItem extends Component {
     this.setState({ isEditing: !isEditing })
   }
 
+  handleDeleteClick = (e) => {
+
+  }
+
+
   render() {
     const { item } = this.props
+    console.log(item)
     return (
       <div>
         {this.state.isEditing ?
           <div>
+            <select onChange={this.handleStatusChange} value={this.state.status}>
+              <option value="Open">Open</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Complete">Complete</option>
+            </select>
             <input
               type="text"
               name="content"
               placeholder={this.state.content}
               value={this.state.content}
-              onChange={this.handleChange}
+              onChange={this.handleContentChange}
             />
             <button onClick={this.handleCancelClick}>Cancel</button>
             <button onClick={this.handleSaveClick}>Save</button>
@@ -77,6 +91,7 @@ export default class ToDoItem extends Component {
           <div>
             <span>{item.status}: {item.content}</span>
             <button onClick={this.handleEditClick}>Edit</button>
+            <button onClick={() => this.props.handleDeleteToDo(this.props.user_id, item.id)}>Delete</button>
           </div>
         }
 
