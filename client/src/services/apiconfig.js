@@ -1,20 +1,22 @@
 import axios from 'axios'
 
-let apiUrl
+// let apiUrl
 
-const apiUrls = {
-  production: '',
-  development: 'http://localhost:3000/'
-}
+const baseUrl = process.env.NODE_ENV === 'production' ? 'https://nighty-night-api.herokuapp.com/' : 'http://localhost:3000'
 
-if (window.location.hostname === 'localhost') {
-  apiUrl = apiUrls.development
-} else {
-  apiUrl = apiUrls.production
-}
+// const apiUrls = {
+//   production: 'https://nighty-night-api.herokuapp.com/',
+//   development: 'http://localhost:3000/'
+// }
+
+// if (window.location.hostname === 'localhost') {
+//   apiUrl = apiUrls.development
+// } else {
+//   apiUrl = apiUrls.production
+// }
 
 const api = axios.create({
-  baseURL: apiUrl,
+  baseURL: baseUrl
 })
 
 export default api
