@@ -5,7 +5,7 @@ class GreatThingsController < ApplicationController
 
   # GET /great_things
   def index
-    @great_things = GreatThing.all
+    @great_things = GreatThing.where(user_id: params[:user_id])
 
     render json: @great_things
   end
@@ -45,7 +45,7 @@ class GreatThingsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_great_thing
-      @great_thing = GreatThing.find(params[:id])
+      @great_thing = GreatThing.find_by(user_id: params[:user_id], id:params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
