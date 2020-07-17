@@ -6072,3 +6072,1555 @@ Processing by ToDosController#index as HTML
 Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1155)
 
 
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:28:40 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-16 16:28:40 -0400
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 6.0ms | Allocations: 1418)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:28:40 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 943)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:28:44 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (1.4ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.4ms | Allocations: 1286)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:29:01 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.8ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 1155)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-16 16:29:04 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.7ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 1284)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-16 16:31:49 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:45:59 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:45:59 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Processing by AuthenticationController#verify as HTML
+Completed 401 Unauthorized in 8ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 337)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:47:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:47:04 -0400
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Processing by AuthenticationController#verify as HTML
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 650)
+
+
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started POST "/auth/login" for ::1 at 2020-07-17 06:47:11 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"jacky@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacky@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 297ms (Views: 3.3ms | ActiveRecord: 5.3ms | Allocations: 1047)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-17 06:47:14 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.7ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 1286)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 06:47:16 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (12.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 2.5ms | ActiveRecord: 12.2ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:54:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:54:46 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2882)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 1484)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 06:54:46 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1157)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:56:33 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:56:33 -0400
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 1150)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 06:56:33 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.3ms | Allocations: 1157)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:57:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:57:17 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 1470)
+
+
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 6.8ms | Allocations: 1746)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 06:57:17 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.4ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1155)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-17 06:57:21 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (0.5ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things"[0m
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1284)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 06:57:22 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:58:14 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:58:14 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 1500)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1708)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 06:58:14 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:59:26 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 06:59:26 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 7.1ms | Allocations: 1447)
+
+
+  [1m[36mUser Load (41.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 51ms (Views: 0.4ms | ActiveRecord: 41.2ms | Allocations: 1546)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 06:59:26 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (12.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 2.6ms | ActiveRecord: 12.3ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:02:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:02:30 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1471)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1565)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:02:30 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:03:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:03:30 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (22.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 0.4ms | ActiveRecord: 3.7ms | Allocations: 1492)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 81ms (Views: 0.4ms | ActiveRecord: 22.8ms | Allocations: 1696)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:03:30 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:03:51 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:03:51 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 11.2ms | Allocations: 1470)
+
+
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 2.9ms | Allocations: 1776)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:03:51 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (11.8ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 2.4ms | ActiveRecord: 11.8ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:04:19 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:04:19 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1219)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 900)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:04:19 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (3.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 3.3ms | Allocations: 1156)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-17 07:04:22 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:04:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:04:46 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 1460)
+
+
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 1742)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:04:46 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (15.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 2.0ms | ActiveRecord: 15.5ms | Allocations: 1155)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-17 07:04:49 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:05:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:05:46 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 1470)
+
+
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 1564)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:05:46 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (5.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 5.3ms | Allocations: 1155)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-17 07:05:50 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:06:27 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:06:27 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1932)
+
+
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1574)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:06:27 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Started POST "/users/1/to_dos/finish%20part%2012" for ::1 at 2020-07-17 07:06:30 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/finish%20part%2012"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:07:56 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:07:56 -0400
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 1593)
+
+
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 10.1ms | Allocations: 1055)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:07:56 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.4ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1155)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-17 07:07:58 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:08:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:08:48 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1469)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 1258)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:08:48 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1155)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-17 07:08:51 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:10:20 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:10:20 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (12.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 12.7ms | Allocations: 843)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:10:20 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (8.0ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 2.2ms | ActiveRecord: 8.0ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:10:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:10:43 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 6.7ms | Allocations: 844)
+
+
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 8.7ms | Allocations: 1885)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:10:43 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (2.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 2.3ms | Allocations: 1155)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-17 07:10:49 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:11:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:11:17 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 1460)
+
+
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 1745)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:11:17 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-17 07:11:20 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:11:52 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:11:52 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 918)
+
+
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 4.9ms | Allocations: 2130)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:11:52 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (13.0ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 2.4ms | ActiveRecord: 13.0ms | Allocations: 1155)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:11:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:11:55 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1461)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 1691)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:11:55 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (21.1ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 6.8ms | ActiveRecord: 21.1ms | Allocations: 1156)
+
+
+Started POST "/users/1/to_dos/1" for ::1 at 2020-07-17 07:11:58 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/1/to_dos/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:12:30 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:12:30 -0400
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 4.6ms | Allocations: 1335)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 912)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:12:30 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.4ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1155)
+
+
+Started PUT "/users/1/to_dos/1" for ::1 at 2020-07-17 07:12:34 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"1", "content"=>"finish part 12", "status"=>"incomplete", "user_id"=>"1", "to_do"=>{"id"=>"1", "content"=>"finish part 12", "status"=>"incomplete", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (59.2ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 12"], ["updated_at", "2020-07-17 11:12:34.050573"], ["id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 81ms (Views: 0.3ms | ActiveRecord: 60.7ms | Allocations: 4582)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:12:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:12:43 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1471)
+
+
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1565)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:12:43 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1156)
+
+
+Started PUT "/users/1/to_dos/1" for ::1 at 2020-07-17 07:13:20 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"1", "content"=>"finish part 4", "status"=>"incomplete", "user_id"=>"1", "to_do"=>{"id"=>"1", "content"=>"finish part 4", "status"=>"incomplete", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 4"], ["updated_at", "2020-07-17 11:13:20.747213"], ["id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 6.2ms | Allocations: 4405)
+
+
+Started PUT "/users/1/to_dos/3" for ::1 at 2020-07-17 07:13:28 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"3", "content"=>"finish part 2.5", "status"=>nil, "user_id"=>"1", "to_do"=>{"id"=>"3", "content"=>"finish part 2.5", "status"=>nil, "user_id"=>"1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.5ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 2.5"], ["updated_at", "2020-07-17 11:13:28.354370"], ["id", 3]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 6.5ms | Allocations: 4398)
+
+
+Started PUT "/users/1/to_dos/10" for ::1 at 2020-07-17 07:13:33 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"10", "content"=>"finish part 6", "status"=>nil, "user_id"=>"1", "to_do"=>{"id"=>"10", "content"=>"finish part 6", "status"=>nil, "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 6"], ["updated_at", "2020-07-17 11:13:33.327257"], ["id", 10]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 6.7ms | Allocations: 4401)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:13:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:13:48 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 875)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 4.5ms | Allocations: 2347)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:13:48 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.9ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.9ms | Allocations: 1155)
+
+
+Started PUT "/users/1/to_dos/1" for ::1 at 2020-07-17 07:14:55 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"1", "content"=>"finish part 44", "status"=>"incomplete", "user_id"=>"1", "to_do"=>{"id"=>"1", "content"=>"finish part 44", "status"=>"incomplete", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.5ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 44"], ["updated_at", "2020-07-17 11:14:55.611218"], ["id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 4410)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:14:59 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:14:59 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 844)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:14:59 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.9ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.9ms | Allocations: 1161)
+
+
+Started PUT "/users/1/to_dos/3" for ::1 at 2020-07-17 07:15:13 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"3", "content"=>"finish part 3", "status"=>"sg", "user_id"=>"1", "to_do"=>{"id"=>"3", "content"=>"finish part 3", "status"=>"sg", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 3"], ["updated_at", "2020-07-17 11:15:13.475563"], ["id", 3]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 6.3ms | Allocations: 4406)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:15:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:15:16 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 874)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 2092)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:15:16 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1162)
+
+
+Started PUT "/users/1/to_dos/10" for ::1 at 2020-07-17 07:15:33 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"10", "content"=>"finish part 6567567", "status"=>nil, "user_id"=>"1", "to_do"=>{"id"=>"10", "content"=>"finish part 6567567", "status"=>nil, "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 6567567"], ["updated_at", "2020-07-17 11:15:33.228665"], ["id", 10]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 6.2ms | Allocations: 4398)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:15:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:15:35 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1713)
+
+
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1324)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:15:35 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.5ms | Allocations: 1161)
+
+
+Started PUT "/users/1/to_dos/10" for ::1 at 2020-07-17 07:16:05 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"10", "content"=>"finish part 6567567arg", "status"=>nil, "user_id"=>"1", "to_do"=>{"id"=>"10", "content"=>"finish part 6567567arg", "status"=>nil, "user_id"=>"1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 6567567arg"], ["updated_at", "2020-07-17 11:16:05.944048"], ["id", 10]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 4398)
+
+
+Started PUT "/users/1/to_dos/3" for ::1 at 2020-07-17 07:16:09 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"3", "content"=>"finish part 3arge", "status"=>"sg", "user_id"=>"1", "to_do"=>{"id"=>"3", "content"=>"finish part 3arge", "status"=>"sg", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 3arge"], ["updated_at", "2020-07-17 11:16:09.076340"], ["id", 3]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 4405)
+
+
+Started PUT "/users/1/to_dos/1" for ::1 at 2020-07-17 07:16:11 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"1", "content"=>"finish part 44arege", "status"=>"incomplete", "user_id"=>"1", "to_do"=>{"id"=>"1", "content"=>"finish part 44arege", "status"=>"incomplete", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 44arege"], ["updated_at", "2020-07-17 11:16:11.115790"], ["id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 4406)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:16:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:16:12 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 844)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:16:13 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (35.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 39ms (Views: 3.3ms | ActiveRecord: 35.3ms | Allocations: 1161)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:16:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:16:21 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1303)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 1055)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:16:21 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 1162)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:16:23 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:16:23 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 845)
+
+
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 2403)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:16:23 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:16:50 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:16:50 -0400
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 1686)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1257)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:16:50 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:19:33 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:19:33 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 844)
+
+
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 10.8ms | Allocations: 2393)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:19:33 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.4ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1161)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:19:42 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:19:42 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 1469)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 1776)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:19:42 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (19.9ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 2.7ms | ActiveRecord: 19.9ms | Allocations: 1161)
+
+
+Started PUT "/users/1/to_dos/10" for ::1 at 2020-07-17 07:19:45 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"10", "content"=>"finish part 6567567argaergaerg", "status"=>nil, "user_id"=>"1", "to_do"=>{"id"=>"10", "content"=>"finish part 6567567argaergaerg", "status"=>nil, "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 6567567argaergaerg"], ["updated_at", "2020-07-17 11:19:45.728300"], ["id", 10]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 4402)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:19:49 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:19:49 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1042)
+
+
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1776)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:19:49 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.6ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 1162)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:19:51 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:19:51 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1008)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 1776)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:19:51 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1162)
+
+
+Started PUT "/users/1/to_dos/3" for ::1 at 2020-07-17 07:19:56 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"3", "content"=>"finish part 3arge awrg", "status"=>"sg", "user_id"=>"1", "to_do"=>{"id"=>"3", "content"=>"finish part 3arge awrg", "status"=>"sg", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 3arge awrg"], ["updated_at", "2020-07-17 11:19:56.802907"], ["id", 3]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 4405)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:20:01 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:20:01 -0400
+  [1m[36mUser Load (24.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 24.5ms | Allocations: 1438)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 900)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:20:01 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (2.7ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 2.7ms | Allocations: 1162)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:21:24 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:21:24 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.1ms | Allocations: 1934)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1566)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:21:24 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.4ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.4ms | Allocations: 1162)
+
+
+Started PUT "/users/1/to_dos/3" for ::1 at 2020-07-17 07:21:29 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"3", "content"=>"finish part 3", "status"=>"sg", "user_id"=>"1", "to_do"=>{"id"=>"3", "content"=>"finish part 3", "status"=>"sg", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.1ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (2.5ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 3"], ["updated_at", "2020-07-17 11:21:29.585589"], ["id", 3]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.3ms | Allocations: 4405)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:21:33 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:21:33 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 7.4ms | Allocations: 1471)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 1314)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:21:33 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (1.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.2ms | Allocations: 1163)
+
+
+Started PUT "/users/1/to_dos/10" for ::1 at 2020-07-17 07:21:47 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"10", "content"=>"finish part 656756", "status"=>nil, "user_id"=>"1", "to_do"=>{"id"=>"10", "content"=>"finish part 656756", "status"=>nil, "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 656756"], ["updated_at", "2020-07-17 11:21:47.965053"], ["id", 10]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 4400)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:21:51 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:21:51 -0400
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 1153)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 6.3ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:21:51 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:24:38 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:24:38 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 1565)
+
+
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 1474)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:24:38 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:24:47 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 844)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:24:47 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:24:47 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+Started PUT "/users/1/to_dos/1" for ::1 at 2020-07-17 07:24:53 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"1", "content"=>"finish part 44aregearger", "status"=>"incomplete", "user_id"=>"1", "to_do"=>{"id"=>"1", "content"=>"finish part 44aregearger", "status"=>"incomplete", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 44aregearger"], ["updated_at", "2020-07-17 11:24:53.620022"], ["id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 4408)
+
+
+Started PUT "/users/1/to_dos/3" for ::1 at 2020-07-17 07:24:56 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"3", "content"=>"finish part 3areg", "status"=>"sg", "user_id"=>"1", "to_do"=>{"id"=>"3", "content"=>"finish part 3areg", "status"=>"sg", "user_id"=>"1"}}
+  [1m[36mToDo Load (0.2ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 3areg"], ["updated_at", "2020-07-17 11:24:56.586668"], ["id", 3]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 4405)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:24:57 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:24:57 -0400
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 1060)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 844)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:24:57 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.5ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1162)
+
+
+Started PUT "/users/1/to_dos/10" for ::1 at 2020-07-17 07:25:03 -0400
+Processing by ToDosController#update as HTML
+  Parameters: {"id"=>"10", "content"=>"finish part 656756aergra", "status"=>nil, "user_id"=>"1", "to_do"=>{"id"=>"10", "content"=>"finish part 656756aergra", "status"=>nil, "user_id"=>"1"}}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:47:in `set_to_do'
+[31mUnpermitted parameters: :id, :status, :user_id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[36mToDo Update (0.3ms)[0m  [1m[33mUPDATE "to_dos" SET "content" = $1, "updated_at" = $2 WHERE "to_dos"."id" = $3[0m  [["content", "finish part 656756aergra"], ["updated_at", "2020-07-17 11:25:03.298315"], ["id", 10]]
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/to_dos_controller.rb:32:in `update'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 4399)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:25:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-07-17 07:25:04 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1474)
+
+
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1565)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-17 07:25:04 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (0.3ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos"[0m
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1163)
+
+

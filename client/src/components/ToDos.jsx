@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getToDos, postToDo } from '../services/toDos.js'
+import { getToDos, postToDo, putToDo } from '../services/toDos.js'
 import CreateToDo from './CreateToDo.jsx'
 import ToDoItem from './ToDoItem.jsx'
 
@@ -35,14 +35,31 @@ export default class ToDos extends Component {
     }))
   }
 
+
+  handleUpdateToDo = async (user_id, id, toDoData) => {
+    const newToDo = await putToDo(user_id, id, toDoData)
+    this.setState(prevState => ({
+      toDos: prevState.toDos.map(toDo => toDo.id === parseInt(id) ? newToDo : toDo)
+    }))
+  }
+
   render() {
+    let { currentUser } = this.props
+    let id = currentUser.id
+    this.state.toDos.sort(function (a, b) { return a.id - b.id })
     return (
       <div>
         <CreateToDo
           handleCreateToDo={this.handleCreateToDo} />
         {this.state.toDos ?
-          this.state.toDos.map((item, index) => {
-            return <ToDoItem key={index} item={item} />
+
+          this.state.toDos.map((item) => {
+            return (
+              <ToDoItem
+                key={item.id}
+                item={item}
+                user_id={id}
+                handleUpdateToDo={this.handleUpdateToDo} />)
           })
           : ''}
 
