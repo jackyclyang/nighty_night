@@ -41,7 +41,7 @@ export default class CreateToDo extends Component {
         <label>
           Here, get out any to-dos that are on your mind <br />
           <select defaultValue='-Select Status-' onChange={this.handleStatusChange} >
-            <option value="-Select Status-" selected="selected" disabled>-Select Status-</option>
+            <option value="-Select Status-" disabled>-Select Status-</option>
             <option value="Open">Open</option>
             <option value="In Progress">In Progress</option>
             <option value="Complete">Complete</option>

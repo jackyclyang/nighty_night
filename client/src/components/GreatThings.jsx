@@ -9,7 +9,8 @@ import "react-datepicker/dist/react-datepicker.css";
 export default class GreatThings extends Component {
   state = {
     greatThings: [],
-    date: ''
+    date: '',
+    showHistory: false
   }
 
   componentDidMount = async () => {
@@ -39,32 +40,45 @@ export default class GreatThings extends Component {
       date: newGreatThings.date
     })
 
+    const { showHistory } = this.state
+    this.setState({ showHistory: !showHistory })
 
+  }
 
+  toggleHistory = (e) => {
+    e.preventDefault()
+    const { showHistory } = this.state
+    this.setState({ showHistory: !showHistory })
   }
 
 
   render() {
-
+    console.log(this.state.showHistory)
     return (
       <div>
         <div className="createGreatThings">
-          <Route exact path="/great">
-            <CreateGreatThings
-              handleCreateGreatThings={this.handleCreateGreatThings}
-            />
-          </Route>
+          <CreateGreatThings
+            handleCreateGreatThings={this.handleCreateGreatThings}
+          />
         </div>
         <div className="getHistory">
-          <Route path="/great/history">
-            <GreatThingsItem
-              allGreatThings={this.state.greatThings}
-              date={this.state.date}
-            />
-          </Route>
+          {this.state.showHistory ?
+            <div>
+              <button onClick={this.toggleHistory}>Hide past</button>
+              <GreatThingsItem
+                allGreatThings={this.state.greatThings}
+                date={this.state.date} />
+            </div> :
+            <button onClick={this.toggleHistory}>See past</button>
+          }
+
+
+
+
+
         </div>
 
-      </div>
+      </div >
     )
   }
 }
