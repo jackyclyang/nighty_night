@@ -11,7 +11,6 @@ export default class ToDos extends Component {
 
   componentDidMount() {
     this.fetchToDos()
-    console.log(this.state.toDos)
   }
 
   fetchToDos = async () => {
@@ -19,9 +18,9 @@ export default class ToDos extends Component {
     let id = currentUser.id
     let toDos = await getAllToDos(id)
 
-    this.setState({ toDos })
+    toDos.sort(function (a, b) { return a.id - b.id })
 
-    console.log(this.state.toDos)
+    this.setState({ toDos })
 
   }
 
@@ -30,16 +29,10 @@ export default class ToDos extends Component {
     let id = currentUser.id
 
     const newToDo = await postToDo(id, toDoData)
-    console.log(newToDo)
-
-    // if (this.state.toDos) {
-    //   this.state.toDos.sort(function (a, b) { return a.id - b.id })
-    // }
 
     this.setState(prevState => ({
       toDos: [...prevState.toDos, newToDo]
     }))
-
   }
 
 
