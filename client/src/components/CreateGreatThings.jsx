@@ -54,6 +54,7 @@ export default class CreateGreatThings extends Component {
           includeDates={[yesterday, today]}
           name="selectDate"
           dateFormat="MM/dd/yyyy"
+          className="datepicker"
         />
         <div className="past-midnight-text">Already after midnight? You can change the date to yesterday.</div>
 

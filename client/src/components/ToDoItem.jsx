@@ -67,33 +67,44 @@ export default class ToDoItem extends Component {
     const { item } = this.props
     console.log(item)
     return (
-      <div>
+      <div >
+
         {this.state.isEditing ?
-          <div>
-            <select onChange={this.handleStatusChange} value={this.state.status}>
-              <option value="Open">Open</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Complete">Complete</option>
-            </select>
-            <input
-              type="text"
-              name="content"
-              placeholder={this.state.content}
-              value={this.state.content}
-              onChange={this.handleContentChange}
-            />
-            <button onClick={this.handleCancelClick}>Cancel</button>
-            <button onClick={this.handleSaveClick}>Save</button>
+          <div className="todo-item">
+            <div className="todo-texts">
+              <select
+                onChange={this.handleStatusChange}
+                value={this.state.status}
+                className="status-select">
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Complete">Complete</option>
+              </select>
+              <input
+                type="text"
+                name="content"
+                placeholder={this.state.content}
+                value={this.state.content}
+                onChange={this.handleContentChange}
+                className="todo-input-edit"
+              />
+            </div>
+            <div className="two-buttons">
+              <button className="primary-button" onClick={this.handleSaveClick}>Save</button>
+              <button className="secondary-button" onClick={this.handleCancelClick}>Cancel</button>
+            </div>
 
           </div>
           :
-          <div>
-            <span>{item.status}: {item.content}</span>
-            <button onClick={this.handleEditClick}>Edit</button>
-            <button onClick={() => this.props.handleDeleteToDo(this.props.user_id, item.id)}>Delete</button>
+          <div className="todo-item">
+            <div className="todo-texts">{item.status}: {item.content}</div>
+            <div className="two-buttons">
+              <button className="primary-button" onClick={this.handleEditClick}>Edit</button>
+              <button className="secondary-button" onClick={() => this.props.handleDeleteToDo(this.props.user_id, item.id)}>Delete</button>
+            </div>
           </div>
         }
-
+        <hr />
       </div>
     )
   }

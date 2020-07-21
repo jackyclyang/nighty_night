@@ -62,18 +62,24 @@ export default class ToDos extends Component {
       <div className="todo-section">
         <CreateToDo
           handleCreateToDo={this.handleCreateToDo} />
-        {this.state.toDos.length > 0 ?
-          this.state.toDos.map((item) => {
-            return (
-              <ToDoItem
-                key={item.id}
-                item={item}
-                user_id={id}
-                handleUpdateToDo={this.handleUpdateToDo}
-                handleDeleteToDo={this.handleDeleteToDo}
-              />)
-          })
-          : 'none'}
+        <div className="todo-items">
+          {this.state.toDos.length > 0 ?
+            this.state.toDos.map((item) => {
+              return (
+
+                <ToDoItem
+                  key={item.id}
+                  item={item}
+                  user_id={id}
+                  handleUpdateToDo={this.handleUpdateToDo}
+                  handleDeleteToDo={this.handleDeleteToDo}
+                />
+              )
+            })
+            : 'none'}
+
+        </div>
+
 
       </div>
     )

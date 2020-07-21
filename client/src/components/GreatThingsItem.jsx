@@ -65,6 +65,7 @@ export default class GreatThingsItem extends Component {
           highlightDates={this.state.allRecordDates}
           name="selectHistoryDate"
           dateFormat="MM/dd/yyyy"
+          className="datepicker"
         />
         <div>
           <div className="history-item">
