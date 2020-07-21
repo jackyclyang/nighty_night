@@ -55,7 +55,7 @@ export default class CreateGreatThings extends Component {
           name="selectDate"
           dateFormat="MM/dd/yyyy"
         />
-        <div>Already after midnight? You can change the date to yesterday above</div>
+        <div className="past-midnight-text">Already after midnight? You can change the date to yesterday.</div>
 
         <br />
         <form onSubmit={(e) => {
@@ -63,17 +63,21 @@ export default class CreateGreatThings extends Component {
           this.handleSubmit()
         }}>
           <label>
-            What great things happend today? <br />
+            <div className="what-happened">Here, write down anything great from today</div>
+            <div className="write-down-great-things-texts">
+              No matter how small the joy it, they all worth remembering.
+              Maybe you saw a cute dog today, or maybe someone held a door for you?</div>
             <textarea
               name="content"
               rows="5"
+              placeholder="Write down any joys!"
               value={this.state.content}
               onChange={this.handleContentChange}
             />
             <br />
           </label>
           <br />
-          <button>Save the joy</button>
+          <button className="save-joy-button">Save the joy</button>
 
         </form >
 

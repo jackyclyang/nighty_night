@@ -3,8 +3,9 @@ import { Route } from 'react-router-dom'
 import Login from './Login.jsx'
 import Register from './Register.jsx'
 import GreatThings from './GreatThings.jsx'
-import GreatThingsItem from './GreatThingsItem.jsx'
 import ToDos from './ToDos.jsx'
+import LandingPage from './LandingPage.jsx'
+import Dashboard from './Dashboard.jsx'
 
 
 export default class Main extends Component {
@@ -17,7 +18,7 @@ export default class Main extends Component {
     const { handleLogin, handleRegister, currentUser } = this.props;
 
     return (
-      <div>
+      <div className="main-body">
         <Route path='/login' render={(props) => (
           <Login
             {...props}
@@ -36,6 +37,12 @@ export default class Main extends Component {
         {currentUser ? (<Route path='/todo'>
           <ToDos currentUser={currentUser} />
         </Route>) : <div></div>}
+
+        {currentUser ? (<Route exact path='/'>
+          <Dashboard currentUser={currentUser} />
+        </Route>) : <Route exact path='/'>
+            <LandingPage />
+          </Route>}
 
       </div>
     )

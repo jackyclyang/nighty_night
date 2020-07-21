@@ -1,0 +1,36 @@
+.dashboard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+.greetings{
+  text-align: center;
+  font-size: 30px;
+  color: #BFC7FF;
+  font-weight: 600;
+}
+.greetings-2{
+  text-align: center;
+  margin: 10px;
+}
+.two-boxes{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.go-to-section{
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  padding: 40px;
+  background-color: #7C80B3;
+  align-items: center;
+  border-radius: 4px;
+  margin: 10px 30px;
+}
+.write-it-down{
+  margin-top: 20px;
+  width: 240px;
+  padding: 10px;
+}

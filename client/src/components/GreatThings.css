@@ -1,0 +1,65 @@
+.great-things{
+  display:flex;
+  flex-direction: column;
+  margin: 40px auto;
+  align-items: center;
+  max-width: 600px;
+  align-content: flex-start;
+}
+.past-midnight-text{
+  font-size: 14px;
+}
+.what-happened{
+  font-size: 24px;
+  margin: 5px 0;
+  color: #BFC7FF;
+  font-weight: 600;
+}
+.write-down-great-things-texts{
+  font-size: 14px;
+  margin: 5px 0 10px 0;
+}
+.get-history{
+  width: 600px;
+  display: flex;
+  align-items: flex-start;
+  margin: 10px auto;
+  overflow: auto;
+}
+.save-joy-button, .history-button{
+  width: 180px;
+}
+.history-button{
+  margin-top: 10px;
+}
+.history-content{
+  margin: 20px 0;
+}
+.history-item{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  background-image: linear-gradient(120deg,#7FCCFD, #7C80B3, #7C80B3, #7C80B3);
+  padding: 10px;
+  border-radius: 4px;
+
+}
+textarea {
+	width: 400px;
+	height: 120px;
+  border: 0px solid #cccccc;
+  border-radius: 4px;
+  font-family: 'Poppins' sans-serif;
+  font-size: 18px; 
+  /* Notebook like background from https://codepen.io/steinvc/pen/kxbgH */
+  background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+  background-repeat:repeat-y, repeat;
+	line-height:40px;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:4px;
+  padding-bottom:34px;
+  resize:vertical;
+  overflow: auto;
+}

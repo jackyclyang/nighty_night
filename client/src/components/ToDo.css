@@ -1,0 +1,8 @@
+.todo-section{
+  display:flex;
+  flex-direction: column;
+  margin: 40px auto;
+  align-items: center;
+  max-width: 600px;
+  align-content: flex-start;
+}

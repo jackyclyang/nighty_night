@@ -1,0 +1,33 @@
+.landing{
+  display:flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  padding: 50px 10px;
+  justify-content: space-evenly;
+}
+.landing-logo{
+  max-width: 280px;
+  margin: 0 20px;
+}
+.top-left{
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0px 10px;
+  padding: 50px 10px;
+}
+.welcome-title{
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #BFC7FF;
+  font-weight: 600;
+}
+.welcome-p{
+  margin-bottom: 20px;
+}
+.top-right{
+  margin: 0px 10px;
+}
+.get-started{
+  font-size: 18px;
+}

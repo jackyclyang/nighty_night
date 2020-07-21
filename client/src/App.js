@@ -45,7 +45,7 @@ class App extends Component {
     let { currentUser } = this.state
     return (
 
-      <div>
+      <div className="App">
         <Header
           currentUser={currentUser}
           handleLogout={this.handleLogout}
@@ -55,6 +55,7 @@ class App extends Component {
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
         />
+
       </div>
     )
   }

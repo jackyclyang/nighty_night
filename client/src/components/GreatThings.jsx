@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { Link, Route, Redirect } from 'react-router-dom'
 import { getGreatThings, postGreatThings } from '../services/greatThings'
 import CreateGreatThings from './CreateGreatThings'
 import GreatThingsItem from './GreatThingsItem'
-import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
+import './GreatThings.css'
+
 
 export default class GreatThings extends Component {
   state = {
@@ -12,6 +11,7 @@ export default class GreatThings extends Component {
     date: '',
     showHistory: false
   }
+
 
   componentDidMount = async () => {
     this.fetchGreatThings()
@@ -49,35 +49,31 @@ export default class GreatThings extends Component {
     e.preventDefault()
     const { showHistory } = this.state
     this.setState({ showHistory: !showHistory })
+
   }
 
 
   render() {
     console.log(this.state.showHistory)
     return (
-      <div>
+      <div className="great-things">
         <div className="createGreatThings">
           <CreateGreatThings
             handleCreateGreatThings={this.handleCreateGreatThings}
           />
         </div>
-        <div className="getHistory">
+        <div className="get-history">
           {this.state.showHistory ?
             <div>
-              <button onClick={this.toggleHistory}>Hide past</button>
+              <button className="history-button" onClick={this.toggleHistory}>Hide past joys</button>
               <GreatThingsItem
                 allGreatThings={this.state.greatThings}
                 date={this.state.date} />
             </div> :
-            <button onClick={this.toggleHistory}>See past</button>
+            <button className="history-button" onClick={this.toggleHistory}>See past joys</button>
           }
 
-
-
-
-
         </div>
-
       </div >
     )
   }

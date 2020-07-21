@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getAllToDos, postToDo, putToDo, deleteToDo } from '../services/toDos.js'
 import CreateToDo from './CreateToDo.jsx'
 import ToDoItem from './ToDoItem.jsx'
+import './ToDo.css'
 
 export default class ToDos extends Component {
 
@@ -58,7 +59,7 @@ export default class ToDos extends Component {
 
 
     return (
-      <div>
+      <div className="todo-section">
         <CreateToDo
           handleCreateToDo={this.handleCreateToDo} />
         {this.state.toDos.length > 0 ?

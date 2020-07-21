@@ -54,8 +54,8 @@ export default class GreatThingsItem extends Component {
   render() {
     return (
       <div>
-        <div>
-          Great things you have had
+        <div className="history-content">
+          Great things you had on
         </div>
         <DatePicker
           defaultValue={new Date(Date.now())}
@@ -67,7 +67,7 @@ export default class GreatThingsItem extends Component {
           dateFormat="MM/dd/yyyy"
         />
         <div>
-          <div>
+          <div className="history-item">
             {this.state.oneGreatThings ?
               this.state.oneGreatThings.map((thing, index) => {
                 return <div key={index}>{thing.content} </div>

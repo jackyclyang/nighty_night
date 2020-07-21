@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import './Register.css'
+import Footer from './Footer.jsx'
 
 export default class Register extends Component {
   state = {
@@ -20,45 +22,52 @@ export default class Register extends Component {
     const { handleRegister, history } = this.props;
 
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        handleRegister(this.state);
-        history.push('/');
-      }}>
-        <h3>Register</h3>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={this.handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={this.handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={this.handleChange}
-          />
-        </label>
-        <br />
-        <button>Submit</button>
-        <Link to='/login'>Sign in here</Link>
-      </form>
+      <div className="register-signin">
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          handleRegister(this.state);
+          history.push('/');
+        }}>
+          <h3>Sign up</h3>
+          <label>
+            <div>Name</div>
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <div>Email</div>
+            <input
+              type="text"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <div>Password</div>
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleChange}
+            />
+          </label>
+          <br />
+          <button className="sign-up">Sign up</button>
+          <div className="already">
+            <Link to='/login'>Already have an account? Sign in here</Link>
+          </div>
+
+        </form>
+        <Footer />
+      </div>
+
     )
   }
 }
