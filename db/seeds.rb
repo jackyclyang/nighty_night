@@ -11,4 +11,4 @@ GreatThing.destroy_all
 ToDo.destroy_all
 
 @jacky = User.create!(name:'Jacky', email:'jacky@email.com', password:'123456')
-GreatThing.create!(content:'I had some super sweet and fresh cherries today', date:'Jul 14, 2020', user:@jacky)
+jackyGreatThing = GreatThing.create!(content:'I had some super sweet and fresh cherries today', date:'Jul 14, 2020', user:@jacky)
