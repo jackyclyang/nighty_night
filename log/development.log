@@ -30102,3 +30102,40 @@ Processing by GreatThingsController#index as HTML
 Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.6ms | Allocations: 2155)
 
 
+Started GET "/auth/verify" for ::1 at 2020-07-21 22:21:24 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 944)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 22:21:24 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 844)
+
+
+Started GET "/users/1/great_things" for ::1 at 2020-07-21 22:21:28 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (1.0ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things" WHERE "great_things"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.0ms | Allocations: 2160)
+
+
+Started POST "/users/1/great_things" for ::1 at 2020-07-21 22:21:52 -0400
+Processing by GreatThingsController#create as HTML
+  Parameters: {"content"=>"something great", "date"=>"Jul 21 2020", "user_id"=>"1", "great_thing"=>{"content"=>"something great", "date"=>"Jul 21 2020", "user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/great_things_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[36mGreatThing Create (7.2ms)[0m  [1m[32mINSERT INTO "great_things" ("content", "date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "something great"], ["date", "Jul 21 2020"], ["created_at", "2020-07-22 02:21:52.641115"], ["updated_at", "2020-07-22 02:21:52.641115"], ["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/great_things_controller.rb:24:in `create'
+Completed 201 Created in 24ms (Views: 0.4ms | ActiveRecord: 13.1ms | Allocations: 3079)
+
+

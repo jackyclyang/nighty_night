@@ -74,21 +74,16 @@ The **Nighty Night** MVP allows users to create accounts. And with that account,
 - Desktop To Do (empty)
 <br>
 
-
 ![Desktop To Do List](https://res.cloudinary.com/dvmkqx6v1/image/upload/v1594670830/ToDo_list_r6uleq.png)
 
 - Desktop To Do
 <br>
 
-![Desktop User Profile](https://res.cloudinary.com/dvmkqx6v1/image/upload/v1594670830/User_Profile_zts9yr.png)
-
-- Desktop User Profile
-<br>
 
 <br>
 
 
-#### [Component Tree](https://res.cloudinary.com/dvmkqx6v1/image/upload/v1594670830/ComponentTree_mz3ehl.png)
+#### [Component Tree](https://res.cloudinary.com/dvmkqx6v1/image/upload/v1595423930/ComponentTree_b4ovxv.png)
 
 #### Component Hierarchy
 
@@ -96,10 +91,9 @@ The **Nighty Night** MVP allows users to create accounts. And with that account,
 ``` structure
 
 src
-|__ assets/
-      |__ images
 |__ components/
       |__ Header.jsx
+      |__ Footer.jsx
       |__ LandingPage.jsx
       |__ Main.jsx 
             |__ Sign up.jsx
@@ -108,13 +102,9 @@ src
             |__ ToDo.jsx
                   |__ ToDoItem.jsx
                   |__ CreateToDoItem.jsx
-                  |__ UpdateToDoItem.jsx
-                  |__ DeleteToDoItem.jsx
             |__ GreatThings.jsx
-                  |__ GreatThingsOneDay.jsx
-                  |__ GreatThingsCalendar.jsx
-                  |__ CreateGreatThingsOneDay.jsx
-            |__ UserProfile.jsx
+                  |__ GreatThingsItem.jsx
+                  |__ CreateGreatThingsjsx
 |__ services/
 
 ```
@@ -130,9 +120,7 @@ src
 |  Dashboard   |   class    |   y   |   y   | _The Dashboard will be the landing page after user sign in._     |
 |     ToDo     |   class    |   y   |   y   | _The ToDo will allow users to create/read/update/delete their to do list for the next day._      |
 | GreatThings  |   class    |   y   |   y   | _The GreatThings will users to create/read/update/delete great things happening on the day_      |
-|  Soundscape  |   class    |   y   |   y   | _The Soundscape will contain soundtracks of natural soothing sounds_      |
-| UserProfile  |   class    |   y   |   y   | _The UserProfile will contain user information with CRUD actions as well as Badges_      |
-|    About     | functional |   n   |   n   | _The About will explain what this app does and why_      |
+|    Footer    | functional |   n   |   n   | _The Footer with credit_      |
 
 
 #### Time Estimates
@@ -140,20 +128,18 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Back-end setup      |    H     |     10 hrs     |       -       |     TBD     |
-| User authentication |    H     |     4 hrs      |       -       |     TBD     |
-| Seed data           |    M     |     4 hrs      |       -       |     TBD     |
-| Services setup      |    H     |     6 hrs      |       -       |     TBD     |
-| Header              |    L     |     1 hrs      |       -       |     TBD     |
-| Landing Page        |    H     |     2 hrs      |       -       |     TBD     |
-| Dashboard           |    H     |     4 hrs      |       -       |     TBD     |
-| ToDo List CRUD      |    H     |     10 hrs     |       -       |     TBD     |
-| Great Things (CR)   |    H     |     10 hrs     |       -       |     TBD     |
-| User Profile        |    H     |     4 hrs      |       -       |     TBD     |
-| About               |    L     |     4 hrs      |       -       |     TBD     |
-| Additional Styling  |    L     |     4 hrs      |       -       |     TBD     |
-| Deployment          |    H     |     1 hrs      |       -       |     TBD     |
-| TOTAL               |          |     64 hrs     |       -       |     TBD     |
+| Back-end setup      |    H     |     10 hrs     |       8 hrs       |     8 hrs     |
+| User authentication |    H     |     4 hrs      |       6 hrs       |     6 hrs     |
+| Seed data           |    M     |     4 hrs      |       1 hr        |     1 hr      |
+| Services setup      |    H     |     6 hrs      |       8 hrs       |     8 hrs     |
+| Header & Footer     |    L     |     1 hr       |       1 hr        |     1 hr      |
+| Landing Page        |    H     |     2 hrs      |       1 hr        |     1 hr      |
+| Dashboard           |    H     |     4 hrs      |       4 hrs       |     4 hrs     |
+| ToDo List CRUD      |    H     |     10 hrs     |       10 hrs      |     10 hrs    |
+| Great Things (CR)   |    H     |     10 hrs     |       10 hrs      |     10 hrs    |
+| Additional Styling  |    L     |     8 hrs      |       12 hrs      |     12 hrs    |
+| Deployment          |    H     |     1 hrs      |       1 hr        |     1 hr      |
+| TOTAL               |          |     60 hrs     |       62 hrs      |     62 hrs    |
 
 
 <br>
@@ -173,7 +159,7 @@ src
 - A reward badge system (e.g. created your first list!)
 - Soundscape: a list of soothing soundtracks (including favorites feature)
 - Add an onboarding stepper that introduces new users to the app
-- Add additional contents that can help faciliate a better nighttime environment (e.g. ASMR, Bedtime stories, Bedtime Routine Tips)
+- Add additional contents that can help faciliate a better nighttime environment (e.g. Bedtime stories, Bedtime Routine Tips)
 
 <br>
 
