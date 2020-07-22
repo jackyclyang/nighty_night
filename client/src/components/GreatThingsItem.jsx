@@ -57,6 +57,7 @@ export default class GreatThingsItem extends Component {
         <div className="history-content">
           Great things you had on
         </div>
+        {/* Date picker from https://www.npmjs.com/package/react-datepicker */}
         <DatePicker
           defaultValue={new Date(Date.now())}
           selected={this.state.historyDate}

@@ -14,10 +14,8 @@ export default function Header(props) {
             <img src={sleep} alt="logo" className="logo-image"></img>
             <h1 className="title">Nighty Night</h1>
           </div>
-
         </Link>
       </div>
-
 
       {currentUser ? (
         <>
@@ -34,7 +32,6 @@ export default function Header(props) {
               Sign out
               </button>
           </div>
-
         </>
       ) : (
           <div className="header-right-side">
@@ -47,7 +44,6 @@ export default function Header(props) {
               </Link>
             </div>
           </div>
-
         )
       }
 

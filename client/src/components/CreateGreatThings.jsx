@@ -79,7 +79,6 @@ export default class CreateGreatThings extends Component {
           </label>
           <br />
           <button className="save-joy-button">Save the joy</button>
-
         </form >
 
       </div>

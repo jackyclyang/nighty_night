@@ -31,7 +31,6 @@ export default class CreateToDo extends Component {
   }
 
   render() {
-
     return (
       <div className="add-todo">
         <form onSubmit={(e) => {
@@ -68,11 +67,8 @@ export default class CreateToDo extends Component {
           <div className="create-todo-button">
             <button>Add</button>
           </div>
-
         </form >
       </div>
-
     )
-
   }
 }

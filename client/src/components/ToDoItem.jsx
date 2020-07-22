@@ -65,7 +65,6 @@ export default class ToDoItem extends Component {
     console.log(item)
     return (
       <div >
-
         {this.state.isEditing ?
           <div className="todo-item">
             <div className="todo-texts">
@@ -90,7 +89,6 @@ export default class ToDoItem extends Component {
               <button className="primary-button" onClick={this.handleSaveClick}>Save</button>
               <button className="secondary-button" onClick={this.handleCancelClick}>Cancel</button>
             </div>
-
           </div>
           :
           <div className="todo-item">

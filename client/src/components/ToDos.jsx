@@ -78,8 +78,6 @@ export default class ToDos extends Component {
             : 'none'}
 
         </div>
-
-
       </div>
     )
   }
