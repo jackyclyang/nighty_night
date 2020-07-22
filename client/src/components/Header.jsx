@@ -8,13 +8,16 @@ export default function Header(props) {
   const { currentUser, handleLogout } = props;
   return (
     <header>
-      <Link to='/'>
-        <div className="logo">
-          <img src={sleep} alt="logo" className="logo-image"></img>
-          <h1 className="title">Nighty Night</h1>
-        </div>
+      <div>
+        <Link to='/'>
+          <div className="logo">
+            <img src={sleep} alt="logo" className="logo-image"></img>
+            <h1 className="title">Nighty Night</h1>
+          </div>
 
-      </Link>
+        </Link>
+      </div>
+
 
       {currentUser ? (
         <>
@@ -25,14 +28,24 @@ export default function Header(props) {
             <div className="header-right-one-element">
               <Link to='/todo'>To Do List</Link>
             </div>
-            <button onClick={handleLogout}>Sign out</button>
+            <button
+              onClick={handleLogout}
+              className="header-right-one-element">
+              Sign out
+              </button>
           </div>
 
         </>
       ) : (
-          <div className="signinandup">
-            <Link to='/login'>Sign in</Link>
-            <Link to='/register'><button className="register-button">Sign up</button></Link>
+          <div className="header-right-side">
+            <div className="header-right-one-element">
+              <Link to='/login'>Sign in</Link>
+            </div>
+            <div className="header-right-one-element">
+              <Link to='/register'>
+                <button className="register-button">Sign up</button>
+              </Link>
+            </div>
           </div>
 
         )

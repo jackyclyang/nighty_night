@@ -17,11 +17,14 @@
 .two-boxes{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 30px;
+  justify-content: center;
 }
 .go-to-section{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   max-width: 320px;
   padding: 40px;
   background-color: #7C80B3;
@@ -33,4 +36,17 @@
   margin-top: 20px;
   width: 240px;
   padding: 10px;
+}
+@media (max-width: 700px){
+  .go-to-section{
+    padding: 30px;
+  }
+}
+@media (max-width: 400px){
+  .go-to-section{
+    max-width: 260px;
+    padding: 20px;
+    margin: 10px 5px;
+    font-size: 14px;
+  }
 }

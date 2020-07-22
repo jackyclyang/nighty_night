@@ -36,7 +36,7 @@
   margin: 20px 0;
 }
 .history-item{
-  width: 600px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   margin: 20px auto;
@@ -61,4 +61,52 @@ textarea {
   padding-bottom:34px;
   resize:vertical;
   overflow: auto;
+}
+@media (max-width: 700px){
+  .great-things{
+    max-width: 400px;
+  }
+  .get-history{
+    width: 400px;
+  }
+  .history-item{
+    width: 400px;
+  }
+  form{
+    width: 400px
+  }
+  textarea{
+    max-width: 300px;
+    padding-left: 50px;
+    padding-right:50px;
+    background-position: 20% 0;
+    padding-top:4px;
+    padding-bottom:34px;
+  }
+}
+@media (max-width: 450px){
+  .great-things{
+    max-width: 260px;
+  }
+  .get-history{
+    width: 260px;
+  }
+  .history-item{
+    width: 260px;
+  }
+  form{
+    width: 260px
+  }
+  textarea{
+    max-width: 160px;
+    padding-left: 50px;
+    padding-right:50px;
+    background-position: 15% 0;
+    padding-top:4px;
+    padding-bottom:34px;
+    font-size: 16px;
+  }
+  .what-happened{
+    font-size: 18px;
+  }
 }

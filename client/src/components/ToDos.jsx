@@ -60,8 +60,10 @@ export default class ToDos extends Component {
 
     return (
       <div className="todo-section">
-        <CreateToDo
-          handleCreateToDo={this.handleCreateToDo} />
+        <div className="add-todo-section">
+          <CreateToDo
+            handleCreateToDo={this.handleCreateToDo} />
+        </div>
         <div className="todo-items">
           {this.state.toDos.length > 0 ?
             this.state.toDos.map((item) => {

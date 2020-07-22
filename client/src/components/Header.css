@@ -4,14 +4,14 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 2px 10px;
-  max-height: 70px;
+  min-height: 50px;
   color:#BFC7FF;
+  flex-wrap: wrap;
 }
 .logo{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
 }
 .logo:hover{
   text-shadow: none;
@@ -25,22 +25,45 @@ header{
   font-weight: 600;
   text-decoration: none;
   color: #BFC7FF;
-}
-.register-button{
-  margin-left: 10px;
-}
-.unselected-icon{
-  width: 40px;
-  height: 40px;
-  fill:#BFC7FF;
+  margin: 10px 0;
 }
 .header-right-side{
   display: flex;
   flex-direction: row;
-  padding: 0 10px;
-  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  margin: 0 10px;
 }
 .header-right-one-element{
   margin-right: 20px;
+}
+@media (max-width: 700px){
+  header{
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .header-right-side{
+    justify-content: center;
+    margin-right: 0px;
+  }
+  .header-right-one-element{
+    margin: 10px 20px;
+  }
+}
+@media (max-width: 400px){
+  header{
+    padding: 5px 0;
+    justify-content: space-around;
+  }
+  .header-right-side{
+    justify-content: center;
+    margin: 0px;
+  }
+  .header-right-one-element{
+    margin: 10px 20px;
+  }
+  .title{
+    font-size: 28px;
+  }
 }

@@ -97,7 +97,7 @@ export default class ToDoItem extends Component {
           </div>
           :
           <div className="todo-item">
-            <div className="todo-texts">{item.status}: {item.content}</div>
+            <div className="todo-texts"><span className="todo-item-status">{item.status}: </span>{item.content}</div>
             <div className="two-buttons">
               <button className="primary-button" onClick={this.handleEditClick}>Edit</button>
               <button className="secondary-button" onClick={() => this.props.handleDeleteToDo(this.props.user_id, item.id)}>Delete</button>
