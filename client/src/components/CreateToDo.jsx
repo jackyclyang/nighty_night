@@ -15,7 +15,7 @@ export default class CreateToDo extends Component {
 
   handleStatusChange = (e) => {
     const { value } = e.target
-    console.log(value)
+
     this.setState({
       status: value
     })

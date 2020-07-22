@@ -58,9 +58,6 @@ export default class ToDoItem extends Component {
     this.setState({ isEditing: !isEditing })
   }
 
-  handleDeleteClick = (e) => {
-
-  }
 
 
   render() {

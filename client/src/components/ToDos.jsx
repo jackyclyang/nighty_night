@@ -5,7 +5,6 @@ import ToDoItem from './ToDoItem.jsx'
 import './ToDo.css'
 
 export default class ToDos extends Component {
-
   state = {
     toDos: []
   }
@@ -55,8 +54,6 @@ export default class ToDos extends Component {
   render() {
     let { currentUser } = this.props
     let id = currentUser.id
-    console.log(this.state.toDos)
-
 
     return (
       <div className="todo-section">
