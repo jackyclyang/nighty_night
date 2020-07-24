@@ -10,8 +10,10 @@
 
 The **Nighty Night** MVP allows users to create accounts. And with that account, the user can write down great things happening that day before bedtime. Research has shown that it helps reduce anxiety and depression. In additon, the user can jog down a to-do list for the following day, which helps people get out any distractions out of their minds. You can have it set, and don't have to worry about what should be done anymore (which really negative impacts your sleep quality). The app will save everything for you to check the next morning.  
 
-## Complete MVP Link
-(http://nighty-night.surge.sh/)
+<br>
+
+### MVP Link
+[Nighty Night](http://nighty-night.surge.sh/)
 
 <br>
 
