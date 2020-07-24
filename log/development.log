@@ -30139,3 +30139,19 @@ Processing by GreatThingsController#create as HTML
 Completed 201 Created in 24ms (Views: 0.4ms | ActiveRecord: 13.1ms | Allocations: 3079)
 
 
+Started GET "/users/1/great_things" for ::1 at 2020-07-22 15:06:38 -0400
+Processing by GreatThingsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mGreatThing Load (1.0ms)[0m  [1m[34mSELECT "great_things".* FROM "great_things" WHERE "great_things"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/great_things_controller.rb:10:in `index'
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 1.5ms | Allocations: 2371)
+
+
+Started GET "/users/1/to_dos" for ::1 at 2020-07-22 15:06:43 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mToDo Load (12.9ms)[0m  [1m[34mSELECT "to_dos".* FROM "to_dos" WHERE "to_dos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/to_dos_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 3.6ms | ActiveRecord: 12.9ms | Allocations: 1475)
+
+

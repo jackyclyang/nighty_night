@@ -65,7 +65,6 @@ export default class ToDos extends Component {
           {this.state.toDos.length > 0 ?
             this.state.toDos.map((item) => {
               return (
-
                 <ToDoItem
                   key={item.id}
                   item={item}

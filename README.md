@@ -30,6 +30,7 @@ The **Nighty Night** MVP allows users to create accounts. And with that account,
 | :--------------: | :----------------------------------------- |
 |      React       | Front-end component framework |
 |   React Router   | Front-end library to set up routes and links |
+|   React Datepicker   | Front-end date picker library |
 |      Axios       | Render API from backend |
 |      Rails       | Back-end framework with Ruby |
 
@@ -164,7 +165,57 @@ src
 <br>
 
 ## Code Showcase
+```javascript
+  handleCreateGreatThings = async (greatThingsData) => {
+    let { currentUser } = this.props
+    let id = currentUser.id
 
+    const newGreatThings = await postGreatThings(id, greatThingsData)
+    this.setState(prevState => ({
+      greatThings: [...prevState.greatThings, newGreatThings]
+    }))
+
+    this.setState({
+      date: newGreatThings.date
+    })
+
+    const { showHistory } = this.state
+    this.setState({ showHistory: !showHistory })
+
+  }
+
+  toggleHistory = (e) => {
+    e.preventDefault()
+    const { showHistory } = this.state
+    this.setState({ showHistory: !showHistory })
+
+  }
+
+
+  render() {
+    console.log(this.state.showHistory)
+    return (
+      <div className="great-things">
+        <div className="createGreatThings">
+          <CreateGreatThings
+            handleCreateGreatThings={this.handleCreateGreatThings}
+          />
+        </div>
+        <div className="get-history">
+          {this.state.showHistory ?
+            <div>
+              <button className="history-button" onClick={this.toggleHistory}>Hide past joys</button>
+              <GreatThingsItem
+                allGreatThings={this.state.greatThings}
+                date={this.state.date} />
+            </div> :
+            <button className="history-button" onClick={this.toggleHistory}>See past joys</button>
+          }
+        </div>
+      </div >
+    )
+  }
+```
 <br>
 
 ## Code Issues & Resolutions
